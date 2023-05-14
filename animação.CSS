@@ -1,0 +1,84 @@
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:300 px;
+    width: 100vw;
+    background: linear-gradient(180deg,cyan,#00BFFF,blue);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+    overflow-y:auto;
+    overflow-x:hidden;
+    margin: 0;
+    background-attachment:scroll;
+}
+@keyframes colors {
+    0%{
+        background-position:0% 50% ;
+    }
+    50%{
+        background-position :100% 50% ; 
+    }100%{
+        background-position: 0% 50% ;
+    }
+}
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+.container{
+    position: relative;
+    width: 100% ;
+    height: 100% ;
+    overflow:visible;
+}
+.star{
+    position: absolute;
+    display: flex;
+}
+.star span {
+    width: 30px;
+    height: 30px;
+    background: rgb(0, 195, 255);
+    margin: 0 4px;
+    border-radius: 90%;
+    box-shadow: 0 0 0 10px #00a0fd44,
+    0 0 0 10px rgb(0, 195, 255),
+    0 0 0 10px rgb(0, 195, 255);
+    animation: animar calc(150s/ var(--i)) linear infinite;
+}
+
+@keyframes animar {
+    0%{
+        transform: translateY(100vh) scale(0.5);
+    }
+    150%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.star span:nth-of-type(even) {
+    background: blue;
+    box-shadow: 0 0 0 10px #0059ff44,
+    0 0 0 10px blue,
+    0 0 0 10px blue;
+
+}
+.teste{
+    
+    color:#0000008a;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    position: center;
+}
+.info{
+    text-align: center;
+    max-width: 800px;
+    color: rgba(0, 0, 0, 0.514);
+}
+.info2{
+    text-align: center;
+    max-width: 800px;
+    color: rgba(0, 0, 0, 0.514);
+}
